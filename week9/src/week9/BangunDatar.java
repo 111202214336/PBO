@@ -8,7 +8,7 @@ public class BangunDatar {
 	    private static final double pi = 3.14;
 
 	    public BangunDatar(int sisi)
-	    {
+	    { 
 	        this.sisi = sisi;
 	    }
 
