@@ -9,7 +9,7 @@ public class calculator extends JFrame implements ActionListener {
     private JButton equalsButton;
     private JButton clearButton;
 
-    private double firstNumber;
+    private double angka1;
     private String operator;
 
     public calculator() {
@@ -63,27 +63,27 @@ public class calculator extends JFrame implements ActionListener {
             String currentText = displayField.getText();
             displayField.setText(currentText + command);
         } else if (command.equals("+") || command.equals("-") || command.equals("*") || command.equals("/") || command.equals("%")) {
-            firstNumber = Double.parseDouble(displayField.getText());
+            angka1 = Double.parseDouble(displayField.getText());
             operator = command;
             displayField.setText("");
         } else if (command.equals("=")) {
-            double secondNumber = Double.parseDouble(displayField.getText());
+            double angka2 = Double.parseDouble(displayField.getText());
             double result = 0;
             switch (operator) {
                 case "+":
-                    result = firstNumber + secondNumber;
+                    result = angka1 + angka2;
                     break;
                 case "-":
-                    result = firstNumber - secondNumber;
+                    result = angka1 - angka2;
                     break;
                 case "*":
-                    result = firstNumber * secondNumber;
+                    result = angka1 * angka2;
                     break;
                 case "/":
-                    result = firstNumber / secondNumber;
+                    result = angka1 / angka2;
                     break;
                 case "%":
-                    result = firstNumber % secondNumber;
+                    result = angka1 % angka2;
                     break;
             }
             displayField.setText(String.valueOf(result));
